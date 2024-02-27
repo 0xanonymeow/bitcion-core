@@ -36,7 +36,7 @@ RUN mv ${COIN_TMP}/${TARBALL_NAME}/bin/* /usr/bin/ && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /var/cache/apt/*
 
 COPY "docker-entrypoint.sh" "/entrypoint.sh"
-COPT "bitcoin.conf" "${COIN_CONF_FILE}"
+COPY "bitcoin.conf" "${COIN_CONF_FILE}"
 COPY "scripts/" "${COIN_SCRIPTS}/"
 
 EXPOSE 8332 8333 18332 18333 18443 18444
