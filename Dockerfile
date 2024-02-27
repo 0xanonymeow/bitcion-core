@@ -1,5 +1,5 @@
 FROM debian:bullseye-slim
-LABEL maintainer="0xanonymeow <anonymeow@incatni.to>
+LABEL maintainer="0xanonymeow <anonymeow@incatni.to>"
 LABEL desciption="A simple docker image for running a bitcoin node"
 
 ENV COIN_ROOT_DIR="/data"
