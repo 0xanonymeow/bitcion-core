@@ -15,7 +15,5 @@ fi
 
 echo "$@"
 if [ "$1" = "bitcoind" ] || [ "$1" = "bitcoin-cli" ] || [ "$1" = "bitcoin-tx" ]; then
-    exec gosu "$(whoami)" "$@"
-else
     exec "$@"
 fi
