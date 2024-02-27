@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  core:
+    container_name: bitcoin-core
+    image: 0xanonymeow/bitcoin-core:v26.0
+    command: bitcoind
+    restart: unless-stopped
+    ports:
+      - 8332:8332
+      - 8333:8333
+      - 18332:18332
+      - 18333:18333
+      - 18443:18443
+      - 18444:18444
+    volumes:
+      - ./bitcoin.conf:/home/coinuser/data/bitcoin.conf
+      - ./data:/home/coinuser/data/resources
