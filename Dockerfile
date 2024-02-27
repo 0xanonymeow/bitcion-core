@@ -33,7 +33,7 @@ RUN mv ${COIN_TMP}/${TARBALL_NAME}/bin/* /usr/bin/ && \
     mv ${COIN_TMP}/${TARBALL_NAME}/include/* /usr/include/ && \
     mv ${COIN_TMP}/${TARBALL_NAME}/lib/* /usr/lib/ && \
     mv ${COIN_TMP}/${TARBALL_NAME}/share/* /usr/share/ && \
-    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /var/cache/apt/*
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 COPY "docker-entrypoint.sh" "/entrypoint.sh"
 COPY "bitcoin.conf" "${COIN_CONF_FILE}"
